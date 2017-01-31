@@ -25,19 +25,58 @@
 
                 <group id="custom_menu_settings" translate="label" type="select" sortOrder="15"
                        showInDefault="1" showInWebsite="1" showInStore="1">
-                    <label>Custom Checkout Configuration</label>
+                    <label>Checkout configurations</label>
                     <depends>
-                        <field id="use_custom_checkout">1</field>
+                        <field id="use_custom_menu">1</field>
                     </depends>
-
-                    <field id="show_categories_grid" translate="label" type="select" sortOrder="20" showInDefault="1"
-                           showInWebsite="1" showInStore="1">
+                    <field id="version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Show all categories</label>
+                        <frontend_model>ML\Checkout\Block\Adminhtml\System\Config\Form\Main</frontend_model>
+                    </field>
+
+                    <field id="additional_fields" translate="label" type="select" sortOrder="61" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Add additional text fields</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="additional_field_1" translate="label" type="select" sortOrder="62" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Add text field</label>
+                        <depends>
+                            <field id="additional_fields">1</field>
+                        </depends>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
 
+                    <field id="additional_field_1_label" translate="label" type="text" sortOrder="63" showInDefault="1"
+                           showInWebsite="1"
+                           showInStore="1">
+                        <label>Label</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="additional_field_1">1</field>
+                        </depends>
+                    </field>
 
 
+                    <field id="additional_link_1_name" translate="label" type="text" sortOrder="64" showInDefault="1"
+                           showInWebsite="1"
+                           showInStore="1">
+                        <label>Field Name &amp; Id</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="additional_field_1">1</field>
+                        </depends>
+                    </field>
+                    <field id="additional_field_1_class" translate="label" type="text" sortOrder="65" showInDefault="1"
+                           showInWebsite="1"
+                           showInStore="1">
+                        <label>Class</label>
+                        <validate>required-entry</validate>
+                        <depends>
+                            <field id="additional_field_1">1</field>
+                        </depends>
+                    </field>
                 </group>
 
             </group>
