@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="customisation_settings_section_tab" translate="label" sortOrder="10">
+            <label>Custom Checkout Settings</label>
+        </tab>
+        <!-- for create section -->
+        <section id="custom_checkout_section" translate="label" type="text" sortOrder="60" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <label>Custom Checkout Settings</label>
+            <!-- Assign section to tab -->
+            <tab>customisation_settings_section_tab</tab>
+            <resource>ML_Checkout::configuration</resource>
+            <!--create group for fields in section-->
+            <group id="custom_checkout_general_settings" translate="label" type="select" sortOrder="5" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Configurations</label>
+
+                <field id="use_custom_checkout" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Use Custom Fields</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
+                <group id="custom_menu_settings" translate="label" type="select" sortOrder="15"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Custom Checkout Configuration</label>
+                    <depends>
+                        <field id="use_custom_checkout">1</field>
+                    </depends>
+
+                    <field id="show_categories_grid" translate="label" type="select" sortOrder="20" showInDefault="1"
+                           showInWebsite="1" showInStore="1">
+                        <label>Show all categories</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+
+
+                </group>
+
+            </group>
+        </section>
+    </system>
+</config>
