@@ -23,60 +23,151 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <group id="custom_menu_settings" translate="label" type="select" sortOrder="15"
+                <group id="custom_checkout_settings" translate="label" type="select" sortOrder="15"
                        showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Checkout configurations</label>
                     <depends>
-                        <field id="use_custom_menu">1</field>
+                        <field id="use_custom_checkout">1</field>
                     </depends>
                     <field id="version" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Show all categories</label>
+                        <label>Show description</label>
                         <frontend_model>ML\Checkout\Block\Adminhtml\System\Config\Form\Main</frontend_model>
                     </field>
-
-                    <field id="additional_fields" translate="label" type="select" sortOrder="61" showInDefault="1"
-                           showInWebsite="1" showInStore="1">
-                        <label>Add additional text fields</label>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    </field>
-                    <field id="additional_field_1" translate="label" type="select" sortOrder="62" showInDefault="1"
-                           showInWebsite="1" showInStore="1">
+                    <group id="custom_checkout_fields_settings" translate="label" type="select" sortOrder="25"
+                           showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Add text field</label>
-                        <depends>
-                            <field id="additional_fields">1</field>
-                        </depends>
-                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    </field>
+                        <field id="additional_field_1" translate="label" type="select" sortOrder="62" showInDefault="1"
+                               showInWebsite="1" showInStore="1">
+                            <label>Add text field 1</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        </field>
+                        <field id="additional_field_1_label" translate="label" type="text" sortOrder="63" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Label</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_1">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_link_1_name" translate="label" type="text" sortOrder="64" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Field Name &amp; Id</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_1">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_field_1_class" translate="label" type="text" sortOrder="65" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Class</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_1">1</field>
+                            </depends>
+                        </field>
 
-                    <field id="additional_field_1_label" translate="label" type="text" sortOrder="63" showInDefault="1"
-                           showInWebsite="1"
-                           showInStore="1">
-                        <label>Label</label>
-                        <validate>required-entry</validate>
-                        <depends>
-                            <field id="additional_field_1">1</field>
-                        </depends>
-                    </field>
+                        <field id="additional_field_2" translate="label" type="select" sortOrder="67" showInDefault="1"
+                               showInWebsite="1" showInStore="1">
+                            <label>Add text field 2</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        </field>
+                        <field id="additional_field_2_label" translate="label" type="text" sortOrder="68" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Label</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_2">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_link_2_name" translate="label" type="text" sortOrder="69" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Field Name &amp; Id</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_2">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_field_2_class" translate="label" type="text" sortOrder="70" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Class</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_2">1</field>
+                            </depends>
+                        </field>
 
+                        <field id="additional_field_3" translate="label" type="select" sortOrder="72" showInDefault="1"
+                               showInWebsite="1" showInStore="1">
+                            <label>Add text field 3</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        </field>
+                        <field id="additional_field_3_label" translate="label" type="text" sortOrder="73" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Label</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_3">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_link_3_name" translate="label" type="text" sortOrder="74" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Field Name &amp; Id</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_3">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_field_3_class" translate="label" type="text" sortOrder="75" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Class</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_3">1</field>
+                            </depends>
+                        </field>
 
-                    <field id="additional_link_1_name" translate="label" type="text" sortOrder="64" showInDefault="1"
-                           showInWebsite="1"
-                           showInStore="1">
-                        <label>Field Name &amp; Id</label>
-                        <validate>required-entry</validate>
-                        <depends>
-                            <field id="additional_field_1">1</field>
-                        </depends>
-                    </field>
-                    <field id="additional_field_1_class" translate="label" type="text" sortOrder="65" showInDefault="1"
-                           showInWebsite="1"
-                           showInStore="1">
-                        <label>Class</label>
-                        <validate>required-entry</validate>
-                        <depends>
-                            <field id="additional_field_1">1</field>
-                        </depends>
-                    </field>
+                        <field id="additional_field_4" translate="label" type="select" sortOrder="77" showInDefault="1"
+                               showInWebsite="1" showInStore="1">
+                            <label>Add text field 4</label>
+                            <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        </field>
+                        <field id="additional_field_4_label" translate="label" type="text" sortOrder="78" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Label</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_4">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_link_4_name" translate="label" type="text" sortOrder="79" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Field Name &amp; Id</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_4">1</field>
+                            </depends>
+                        </field>
+                        <field id="additional_field_4_class" translate="label" type="text" sortOrder="80" showInDefault="1"
+                               showInWebsite="1"
+                               showInStore="1">
+                            <label>Class</label>
+                            <validate>required-entry</validate>
+                            <depends>
+                                <field id="additional_field_4">1</field>
+                            </depends>
+                        </field>
+                    </group>
                 </group>
 
             </group>

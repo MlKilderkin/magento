@@ -2,31 +2,32 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
     <default>
-        <custom_menu_section>
-            <custom_menu_general_settings>
-                <use_custom_menu>1</use_custom_menu>
-                <custom_menu_settings>
-                    <show_home_page_link>1</show_home_page_link>
-                    <show_categories_grid>1</show_categories_grid>
-                    <additional_links>1</additional_links>
-                    <additional_link_1>1</additional_link_1>
-                    <additional_link_1_title>Test</additional_link_1_title>
-                    <additional_link_1_href>test</additional_link_1_href>
-                    <additional_link_1_class></additional_link_1_class>
-                    <additional_link_2>0</additional_link_2>
-                    <additional_link_2_title></additional_link_2_title>
-                    <additional_link_2_href></additional_link_2_href>
-                    <additional_link_2_class></additional_link_2_class>
-                    <additional_link_3>0</additional_link_3>
-                    <additional_link_3_title></additional_link_3_title>
-                    <additional_link_3_href></additional_link_3_href>
-                    <additional_link_3_class></additional_link_3_class>
-                    <additional_link_4>0</additional_link_4>
-                    <additional_link_4_title></additional_link_4_title>
-                    <additional_link_4_href></additional_link_4_href>
-                    <additional_link_4_class></additional_link_4_class>
-                </custom_menu_settings>
-            </custom_menu_general_settings>
-        </custom_menu_section>
+        <custom_checkout_section>
+            <custom_checkout_general_settings>
+                <use_custom_checkout>1</use_custom_checkout>
+                <custom_checkout_settings>
+                    <custom_checkout_fields_settings>
+                        <additional_field_1>0</additional_field_1>
+                        <additional_field_1_label></additional_field_1_label>
+                        <additional_field_1_name></additional_field_1_name>
+                        <additional_field_1_class></additional_field_1_class>
+                        <additional_field_2>0</additional_field_2>
+                        <additional_field_2_label></additional_field_2_label>
+                        <additional_field_2_name></additional_field_2_name>
+                        <additional_field_2_class></additional_field_2_class>
+                        <additional_field_3>0</additional_field_3>
+                        <additional_field_3_label></additional_field_3_label>
+                        <additional_field_3_name></additional_field_3_name>
+                        <additional_field_3_class></additional_field_3_class>
+                        <additional_field_4>0</additional_field_4>
+                        <additional_field_4_label></additional_field_4_label>
+                        <additional_field_4_name></additional_field_4_name>
+                        <additional_field_4_class></additional_field_4_class>
+
+                    </custom_checkout_fields_settings>
+
+                </custom_checkout_settings>
+            </custom_checkout_general_settings>
+        </custom_checkout_section>
     </default>
 </config>
